@@ -1,5 +1,8 @@
 # Lock My Phone
-Bug Tracker and Feature Requests for the Android App LOCK MY PHONE
+Official Bug Tracker and Feature Request-Forum for the Android App **Lock My Phone**
 
-You can find it here:
+You can find the app here:
 https://play.google.com/store/apps/details?id=tomka.lockmyphone
+
+Best,
+Thomas Kahn
