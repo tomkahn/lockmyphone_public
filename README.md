@@ -1,7 +1,7 @@
 # Lock My Phone
 Official Bug Tracker and Feature Request-Forum for the Android App **Lock My Phone**
 
-You can get the app [here](https://play.google.com/store/apps/details?id=tomka.lockmyphone) on Google Play (500k+ downloads).
+You can get the app [here](https://play.google.com/store/apps/details?id=tomka.lockmyphone) on Google Play (500k+ downloads 🎉).
 
 # Getting Lock My Phone to work with [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) (and, by extension, [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
 
@@ -13,7 +13,7 @@ Lock My Phone (LMP) can interact with Automate in three ways:
 
 * LMP will notify Automate via broadcast every time the lock status of the phone changes.
 * Automate can demand a list of all existing locks from LMP (via broadcast). LMP will then broadcast that list back to Automate.
-* 🆕 Enable or disable individual locks (one time or recurrring).
+* 🆕 Enable or disable individual locks (works with one time and recurrring locks).
 
 ## 1. Receiving status updates from LMP in Automate
 
@@ -44,10 +44,10 @@ First you must get the ID of the lock you want to enable or disable. Each lock h
 
 [🖼 Where do I find the ID?](https://e.pcloud.link/publink/show?code=XZVlc1Zvq8lHUxA6bLBzEgplzglc71fpgEk)
 
-To start the lock you need to [broadcast "START 3"](https://e.pcloud.link/publink/show?code=XZ9lc1Z8EgIYgLGFJLo0K3wyVGYxfUpSXaV) (if 3 is the ID of the lock you want to activate) to Lock My Phone. Here is a flow that does that:
+To start a lock [broadcast "START 3"](https://e.pcloud.link/publink/show?code=XZ9lc1Z8EgIYgLGFJLo0K3wyVGYxfUpSXaV) (if 3 is the ID of the lock you want to activate) to Lock My Phone. Here is a flow that does that:
 
 [⏬ Flow "Starting a lock period from Automate"]([https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Start_locks.flo](https://e.pcloud.link/publink/show?code=XZYlc1ZLhpE0FiYL5jwdvjprvvIT7mAAOnV)https://e.pcloud.link/publink/show?code=XZYlc1ZLhpE0FiYL5jwdvjprvvIT7mAAOnV) (The fastest way)
 
 ☝ Please note: Under Android 13 and up starting a lock from outside of Lock My Phone is only possible when Lock My Phone is already running in the background. To get LMP running in the background you must have at least one recurring lock period enabled. It can be a very short one that only locks your phone for 1 minute on 1 specific day only.
 
-To stop a lock you need to broadcast "STOP 3" (if 3 is the ID of the lock you want to activate) to Lock My Phone.
+To stop a lock broadcast "STOP 3" (if 3 is the ID of the lock you want to activate) to Lock My Phone.
