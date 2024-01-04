@@ -6,14 +6,15 @@ https://play.google.com/store/apps/details?id=tomka.lockmyphone
 
 # Getting Lock My Phone to work with [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) (and, by extension, [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
 
-Automate is one of my favorite apps because it allows me to control my environment better. This actually [does make me happy](https://www.joelonsoftware.com/2000/04/10/controlling-your-environment-makes-you-happy/).
+Automate is one of my favorite apps because it allows me to control my environment better, which [makes me happy](https://www.joelonsoftware.com/2000/04/10/controlling-your-environment-makes-you-happy/).
 
 ## Overview
 
-Lock My Phone can interact with Automate in two ways:
+Lock My Phone (LMP) can interact with Automate in three ways:
 
-1. LMP will notify Automate via broadcast every time the lock status of the phone changes.
-2. Automate can demand a list of all currently enabled *recurring locks* from LMP (via broadcast). LMP will then broadcast that list back to Automate.
+* LMP will notify Automate via broadcast every time the lock status of the phone changes.
+* Automate can demand a list of all existing locks from LMP (via broadcast). LMP will then broadcast that list back to Automate.
+* 🆕 Enable or disable individual locks (one time or recurrring).
 
 ## 1. Receiving status updates from LMP in Automate
 
@@ -28,12 +29,26 @@ There are four possible states that LMP will broadcast to Automate:
 
 To receive status updates from LMP in Automate you have to enable receiving broadcasts. Here is a flow that does just that (4 blocks):
 
-[Flow "Receiving lock status updates"](http://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Receive_Status_Updates_for_Locks.flo)
+[Flow "Receiving lock status updates"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Receive_Status_Updates_for_Locks.flo)
 
 ## 2. Receive a list of all currently enabled recurring locks
 
 Example use case: Send daily email reports about your locks to a friend whom you promised you would use Lock My Phone regularly while you're preparing for an exam.
 
-[Flow "Receiving the lock list"](http://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Get_list_of_all_enabled_locks.flo) (The fastest way)
+[Flow "Receiving the lock list"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Get_list_of_all_enabled_locks.flo) (The fastest way)
 
-[Flow "Sending email reports about your enabled locks"](http://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Daily_E-Mail-Reports.flo) (advanced example): This flow also shows you how to loop through the JSON data that LMP sends to Automate.
+[Flow "Sending email reports about your enabled locks"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Daily_E-Mail-Reports.flo) (advanced example): This flow also shows you how to loop through the JSON data that LMP sends to Automate.
+
+## 🆕 3. Enable or disable a lock
+
+First you must get the ID of the lock you want to enable or disable. Each lock has a unique ID (a number, for example 3) which you can find in the menu of the lock on the bottom right:
+
+[🖼 Where do I find the ID?](https://e.pcloud.link/publink/show?code=XZVlc1Zvq8lHUxA6bLBzEgplzglc71fpgEk)
+
+To start the lock you need to [broadcast "START 3"](https://e.pcloud.link/publink/show?code=XZ9lc1Z8EgIYgLGFJLo0K3wyVGYxfUpSXaV) (if 3 is the ID of the lock you want to activate) to Lock My Phone. Here is a flow that does that:
+
+[⏬ Flow "Starting a lock period from Automate"]([https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Start_locks.flo](https://e.pcloud.link/publink/show?code=XZYlc1ZLhpE0FiYL5jwdvjprvvIT7mAAOnV)https://e.pcloud.link/publink/show?code=XZYlc1ZLhpE0FiYL5jwdvjprvvIT7mAAOnV) (The fastest way)
+
+☝ Please note: Under Android 13 and up starting a lock from outside of Lock My Phone is only possible when Lock My Phone is already running in the background. To get LMP running in the background you must have at least one recurring lock period enabled. It can be a very short one that only locks your phone for 1 minute on 1 specific day only.
+
+To stop a lock you need to broadcast "STOP 3" (if 3 is the ID of the lock you want to activate) to Lock My Phone.
