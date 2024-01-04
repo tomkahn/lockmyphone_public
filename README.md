@@ -1,12 +1,11 @@
 # Lock My Phone
 Official Bug Tracker and Feature Request-Forum for the Android App **Lock My Phone**
 
-You can find the app here:
-https://play.google.com/store/apps/details?id=tomka.lockmyphone
+You can get the app [here](https://play.google.com/store/apps/details?id=tomka.lockmyphone) on Google Play (500k+ downloads).
 
 # Getting Lock My Phone to work with [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) (and, by extension, [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
 
-Automate is one of my favorite apps because it allows me to control my environment better, which [makes me happy](https://www.joelonsoftware.com/2000/04/10/controlling-your-environment-makes-you-happy/).
+Automate is one of my favorite apps because it allows me to control my environment better. This [makes me happy](https://www.joelonsoftware.com/2000/04/10/controlling-your-environment-makes-you-happy/).
 
 ## Overview
 
