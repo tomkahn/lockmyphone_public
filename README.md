@@ -34,7 +34,7 @@ To receive status updates from LMP in Automate you have to enable receiving broa
 
 Example use case: Send daily email reports about your locks to a friend whom you promised you would use Lock My Phone regularly while you're preparing for an exam.
 
-[Flow "Receiving the lock list"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Get_list_of_all_enabled_locks.flo) (The fastest way)
+[Flow "Receiving the lock list"](https://github.com/tomkahn/lockmyphone_public/raw/9c1755aad2ab935aaf567fda21efd05397f601bb/LMP_Automate_flow/LMP_get_list_of_all_enabled_locks_with_last_time_activated.flo) (The fastest way)
 
 [Flow "Sending email reports about your enabled locks"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Daily_E-Mail-Reports.flo) (advanced example): This flow also shows you how to loop through the JSON data that LMP sends to Automate.
 
