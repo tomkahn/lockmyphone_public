@@ -38,7 +38,13 @@ Example use case: Send daily email reports about your locks to a friend whom you
 
 [Flow "Sending email reports about your enabled locks"](https://www.thomaskahn.de/lockmyphone/download.php?action=download&file=LMP_Daily_E-Mail-Reports.flo) (advanced example): This flow also shows you how to loop through the JSON data that LMP sends to Automate.
 
-## 🆕 3. Enable or disable a lock
+## 3. Receive a list of all created locks
+
+Example use case: Get a complete list of all locks you have created in Lock My Phone (both enabled and disabled) for backup, synchronization, analytics, or custom automation.
+
+[Flow "Receiving the list of all created locks"](https://github.com/tomkahn/lockmyphone_public/raw/refs/heads/master/LMP_Automate_flow/LMP_Get_list_of_all_created_locks.flo) (Returns all created locks regardless of their current state)
+
+## 🆕 4. Enable or disable a lock
 
 First you must get the ID of the lock you want to enable or disable. Each lock has a unique ID (a number, for example 3) which you can find in the menu of the lock on the bottom right:
 
